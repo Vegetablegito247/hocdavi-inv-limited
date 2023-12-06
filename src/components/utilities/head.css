@@ -1,15 +1,25 @@
 @media (max-width: 575px) {
     .abt-des1 {
         top: -8vh;
-        left: -22vw;
+        left: -28%;
         height: 150px;
         width: 350px;
     }
 
     .abt-des2 {
         bottom: -8vh;
-        right: -22vw;
+        right: -28%;
         height: 150px;
         width: 350px;
+    }
+}
+
+@media (max-width: 428px) {
+    .abt-des1 {
+        left: -40%;
+    }
+
+    .abt-des2 {
+        right: -40%;
     }
 }

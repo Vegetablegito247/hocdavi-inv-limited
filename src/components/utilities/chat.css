@@ -1,0 +1,114 @@
+.contChat {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 64 175 / var(--tw-bg-opacity));
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    transition: transform .7s;
+    box-shadow: 0 0 5px rgb(40, 40, 40);
+}
+
+.msg1 {
+    padding: 5px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 55px;
+    right: 100px;
+    font-size: 12px;
+    transition: .7s;
+    opacity: 1;
+    box-shadow: 0 0 5px rgb(40, 40, 40);
+}
+
+.msg1,
+.msg2,
+.contChat {
+    z-index: 12;
+}
+
+.msg1.active {
+    bottom: 20px;
+    opacity: 0;
+}
+
+.msg2.active {
+    bottom: 90px;
+    opacity: 0;
+}
+
+.msg2 {
+    display: grid;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgb(40, 40, 40);
+    position: fixed;
+    right: 30px;
+    bottom: 110px;
+    width: 320px;
+    opacity: 1;
+    transition: linear.7s;
+}
+
+.msg2:hover {
+    box-shadow: 0 0 10px rgb(67, 67, 67);
+}
+
+.msgTxt h3 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.msgTxt p {
+    font-size: 12px;
+}
+
+.clkTxt h3,
+.clkTxt p {
+    line-height: normal;
+}
+
+.clkTxt h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.clkTxt p {
+    font-size: 12px;
+}
+
+/* Apply styles to rotate the icon */
+.rotate-icon {
+    transition: transform 0.5s ease-in-out;
+    animation: rotateAnimation 1s linear;
+}
+.rotate-icon2 {
+    transition: transform 0.5s ease-in-out;
+    animation: rotateAnimation2 1s linear;
+}
+
+/* Define your animation for icon rotation */
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg) scale(0.5);
+    }
+
+    to {
+        transform: rotate(-360deg) scale(1);
+    }
+}
+
+@keyframes rotateAnimation2 {
+    from {
+        transform: rotate(0deg) scale(0.5);
+    }
+
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}

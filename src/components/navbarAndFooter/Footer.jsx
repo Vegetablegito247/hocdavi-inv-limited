@@ -6,13 +6,13 @@ import { IoIosMail } from "react-icons/io";
 import { TiSocialAtCircular } from "react-icons/ti";
 import { IoTime } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
     return (
         <footer>
-            <div className='subNltr grid grid-temp items-center gap-x-4 bg-slate-600 text-slate-100 mt-20 p-12'>
-                <div className='mailLogo flex items-center justify-center w-16 h-16 rounded-full text-3xl bg-blue-800'>
+            <div className='subNltr grid grid-temp items-center gap-y-6 text-center gap-x-4 bg-slate-600 text-slate-100 lg:mt-10 mt-20 p-12 lg:grid lg:grid-cols-1 md:p-5'>
+                <div className='mailLogo flex items-center justify-center lg:mx-auto w-16 h-16 rounded-full text-3xl bg-blue-800'>
                     <LiaMailBulkSolid />
                 </div>
                 <div className="subTxt">
@@ -22,16 +22,16 @@ function Footer() {
                     </p>
                 </div>
                 <form action="" className="subfrm flex items-center gap-x-3">
-                    <div className="subCtrl flex items-center">
-                        <input type="email" className=' w-64 h-11 border-blue-800 border-2 rounded-lg text-slate-900 p-2 outline-none' />
+                    <div className="subCtrl flex items-center lg:w-3/4">
+                        <input type="email" className=' w-64 h-11 border-blue-800 border-2 rounded-lg text-slate-900 p-2 outline-none lg:w-full' />
                     </div>
-                    <div className="subFrmBtn">
-                        <button className=' w-40 h-11 rounded-xl bg-blue-800 font-bold'>Subscribe</button>
+                    <div className="subFrmBtn lg:w-1/3">
+                        <button className=' w-40 h-11 rounded-xl bg-blue-800 font-bold lg:w-full'>Subscribe</button>
                     </div>
                 </form>
             </div>
 
-            <div className="getToUs w-full p-9 bg-slate-800 text-slate-100 grid grid-cols-5">
+            <div className="getToUs w-full p-9 bg-slate-800 text-slate-100 grid gap-y-5 grid-cols-5 lg:p-8 lg:grid-cols-1 md:p-5">
                 <div className="get flex  gap-x-3 h-full">
                     <div className="getLogo">
                         <ImLocation2 className=' text-5xl text-blue-800' />
@@ -99,7 +99,7 @@ function Footer() {
                             </li>
                             <li>
                                 <Link>
-                                    <FaLinkedin className='text-2xl' />
+                                    <FaWhatsapp className='text-2xl' />
                                 </Link>
                             </li>
                         </ul>
