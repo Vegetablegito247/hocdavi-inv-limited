@@ -38,7 +38,7 @@ function AboutUs() {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 1.3,
+        delay: 1.1,
         duration: 4,
         mass: .4,
         damping: 7,
@@ -59,7 +59,7 @@ function AboutUs() {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 1.3,
+        delay: 1.1,
         duration: 4,
         mass: .4,
         damping: 7,

@@ -29,7 +29,7 @@ function Main() {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1.3,
+                delay: 1.1,
                 duration: 4,
                 mass: .4,
                 damping: 7,
@@ -50,7 +50,7 @@ function Main() {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1.3,
+                delay: 1.1,
                 duration: 4,
                 mass: .4,
                 damping: 7,
@@ -188,7 +188,7 @@ function Main() {
                 <motion.div className="teamInfo lg:mt-10 mt-12 grid lg:grid-cols-1 gap-y-4">
                     <div className="member grid grid2 gap-y-4 gap-x-5 bg-blue-800 p-3 rounded-xl">
                         <div className="tmImg w-full h-96 rounded-xl">
-                            <img className=' w-full h-full rounded-xl' src={margeret} alt="" />
+                            <img className=' w-full h-full rounded-xl object-cover' src={margeret} alt="" />
                         </div>
                         <div className="tmInfo text-start">
                             <h3 className='text-xl font-semibold'>Margaret Mere</h3>
@@ -198,7 +198,7 @@ function Main() {
                     </div>
                     <div className="member grid grid2 gap-y-4 gap-x-5 bg-blue-800 p-3 rounded-xl">
                         <div className="tmImg w-full h-96 rounded-xl">
-                            <img className=' w-full h-full rounded-xl' src={kelechi} alt="" />
+                            <img className=' w-full h-full rounded-xl object-cover' src={kelechi} alt="" />
                         </div>
                         <div className="tmInfo text-start">
                             <h3 className='text-xl font-semibold'>Kelechi Mere</h3>
