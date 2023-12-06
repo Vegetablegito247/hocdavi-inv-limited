@@ -95,8 +95,8 @@ function Apply1st() {
                         </div>
                     </div>
                 </div>
-                <div onClick={handleNavigate} className="subBtn w-full p-4 mt-8 text-end">
-                    <button className=' w-56 h-12 bg-blue-800 font-bold rounded-xl sm:w-full'>Next</button>
+                <div className="subBtn w-full p-4 mt-8 text-end">
+                    <button onClick={handleNavigate} className=' w-56 h-12 bg-blue-800 font-bold rounded-xl sm:w-full'>Next</button>
                 </div>
             </form>
         </div>
