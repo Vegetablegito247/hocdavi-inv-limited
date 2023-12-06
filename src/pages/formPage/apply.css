@@ -1,0 +1,41 @@
+.frmCtrl {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+    padding: 10px;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.frmCtrl input, .frmCtrl select {
+    --tw-border-opacity: 1;
+    border: 2px solid rgb(30 64 175 / var(--tw-bg-opacity));
+    height: 40px;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+    color: rgb(30 41 59);
+}
+
+.frmCtrl textarea {
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    height: 100px;
+    color: rgb(30 41 59);
+    --tw-border-opacity: 1;
+    border: 2px solid rgb(30 64 175 / var(--tw-bg-opacity));
+}
+
+.frmRd {
+    display: grid;
+    grid-template-columns: 12fr;
+}
+
+.frmRd label {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}

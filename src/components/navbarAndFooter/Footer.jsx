@@ -4,6 +4,7 @@ import { ImLocation2 } from "react-icons/im";
 import { BiPhoneCall } from "react-icons/bi";
 import { IoIosMail } from "react-icons/io";
 import { TiSocialAtCircular } from "react-icons/ti";
+import { IoTime } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
@@ -30,17 +31,32 @@ function Footer() {
                 </form>
             </div>
 
-            <div className="getToUs w-full p-12 bg-slate-800 text-slate-100 grid grid-cols-4">
+            <div className="getToUs w-full p-9 bg-slate-800 text-slate-100 grid grid-cols-5">
                 <div className="get flex  gap-x-3 h-full">
                     <div className="getLogo">
                         <ImLocation2 className=' text-5xl text-blue-800' />
                     </div>
                     <div className="getInfo">
-                        <h3 className=' text-xl font-bold mb-3'>Address</h3>
-                        <div className="getTxt grid gap-y-3 leading-7">
-                            <span><b>Nigeria:</b> Haj estate flat 32B off Arab Road Kubwa FCT, Abuja</span>
-                            <span><b>Canada:</b> 223 Bolstad Manor, Saskatoon, SK S7W 0Y1</span>
+                        <div className="address">
+                            <h3 className=' text-xl font-bold mb-2'>Address</h3>
+                            <div className="getTxt grid gap-y-2">
+                                <span><b>Nigeria:</b> Haj estate flat 32B off Arab Road Kubwa FCT, Abuja</span>
+                                <span><b>Canada:</b> 971 Gladmer park, Regina, Saskatchewan S4P 2X8</span>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div className="get flex gap-x-3 h-full">
+                    <div className="getLogo">
+                    <IoTime className=' text-5xl text-blue-800' />
+                    </div>
+                    <div className="getInfo">
+                            <h3 className=' text-xl font-bold mb-3'>Open hours</h3>
+                            <div className="viewTime grid gap-y-2">
+                                <span><b>Mon - Fri:</b> 8:00am - 18:00pm</span>
+                                <span><b>Saturdays:</b> 9:00am - 16:00pm</span>
+                                <span><b>Sundays:</b> closed</span>
+                            </div>
                     </div>
                 </div>
                 <div className="get flex gap-x-3 h-full">
@@ -50,9 +66,7 @@ function Footer() {
                     <div className="getInfo">
                         <h3 className=' text-xl font-bold mb-3'>Contact Us</h3>
                         <div className="getTxt">
-                            <span className=' block leading-7'>+1-(639)-384-5328</span>
                             <span className=' block leading-7'>+1-(306)-501-8411 </span>
-                            <span className=' block leading-7'>+234-806-094-2907 </span>
                             <span className=' block leading-7'>+234-806-090-2766</span>
                         </div>
                     </div>
@@ -63,7 +77,7 @@ function Footer() {
                     </div>
                     <div className="getInfo">
                         <h3 className=' text-xl font-bold mb-3'>Email us</h3>
-                        <span>avodahgvl@gmail.com</span>
+                        <span>hocdavi7@gmail.com</span>
                     </div>
                 </div>
                 <div className="get flex gap-x-3 h-full">

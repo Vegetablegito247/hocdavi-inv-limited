@@ -1,0 +1,15 @@
+.listPages li a.active {
+    --tw-text-opacity: 1;
+    color: rgb(30 64 175 / var(--tw-text-opacity));
+    transform: scale(1.2);
+}
+
+@media (max-width: 575px) {
+    .contList {
+        z-index: 10;
+        display: none;
+    }
+    .applyBtn {
+        margin-top: auto;
+    }
+}
