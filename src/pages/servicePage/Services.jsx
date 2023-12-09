@@ -56,6 +56,30 @@ function Services() {
         }
     ];
 
+    const logSvr = [
+        {
+            head: 'Warehousing Solutions',
+            text: 'Providing customized warehousing solutions tailored to meet diverse storage needs, optimizing inventory management and distribution.'
+        },
+        {
+            head: 'Transportation Services',
+            text: 'Offering reliable transportation services, ensuring timely and secure delivery of goods across various routes and destinations.'
+        },
+        {
+            head: 'Supply Chain Management',
+            text: 'Managing end-to-end supply chains, optimizing processes to enhance efficiency, reduce costs, and improve overall logistics performance.'
+        },
+        {
+            head: 'Inventory Management',
+            text: 'Implementing efficient inventory control systems and procedures, minimizing stockouts and optimizing stock levels.'
+        },
+        {
+            head: 'Last-Mile Delivery Solutions',
+            text: 'Offering effective last-mile delivery solutions, optimizing routes and ensuring prompt delivery to end customers.'
+        }
+    ];
+
+
     const container1 = {
         hidden: {
             x: 100,
@@ -161,6 +185,33 @@ function Services() {
                                     <div className="svrTxt">
                                         <h4 className='font-bold text-lg'>{visa.head}</h4>
                                         <span>{visa.text}</span>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </motion.div>
+
+                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5"
+                    variants={container2}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true }}
+                >
+                    <h3 className='text-4xl font-bold mb-6 lg:text-3xl lg:mb-4'>Our Logistic Services</h3>
+                    <p>
+                        From optimizing transportation networks to enhancing supply chain efficiencies, our adept consultants offer tailored strategies and actionable insights. Whether it's streamlining operations, refining distribution processes, or fostering innovation, our collaborative approach drives logistical excellence and sustainable growth for our clients.
+                    </p>
+                    <div className="prdSvr grid grid-cols-1 gap-y-5 bg-slate-800 p-5 rounded-xl text-slate-100 mt-4">
+                        {
+                            logSvr.map((log, ind) => (
+                                <div key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
+                                    <div className="eduIcon">
+                                        <MdDoubleArrow />
+                                    </div>
+                                    <div className="svrTxt">
+                                        <h4 className='font-bold text-lg'>{log.head}</h4>
+                                        <span>{log.text}</span>
                                     </div>
                                 </div>
                             ))
