@@ -5,7 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
 import './nav.css'
 
-function Navbar({openBar, handleSidebar}) {
+function Navbar({ openBar, handleSidebar }) {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
@@ -38,9 +38,14 @@ function Navbar({openBar, handleSidebar}) {
                     <button onClick={handleNavigate} className=' w-32 h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'>Apply Now</button>
                 </div>
             </div>
-            <div onClick={handleSidebar} className="burger items-center justify-center w-8 h-8 rounded-lg bg-blue-800 text-slate-100 p-1 text-lg hidden lg:flex">
-                    <GiHamburgerMenu />
+            <div className="burApply hidden gap-x-4 items-center h-full lg:flex">
+                <div className="apply">
+                    <button className='w-32 h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'>Apply now</button>
                 </div>
+                <div onClick={handleSidebar} className="burger items-center justify-center w-8 h-8 rounded-lg bg-blue-800 text-slate-100 p-1 text-lg hidden lg:flex">
+                <GiHamburgerMenu />
+            </div>
+            </div>
         </nav>
     )
 }
