@@ -278,9 +278,9 @@ function Main() {
                 whileInView='visible'
                 viewport={{ once: true }}
             >
-                <motion.h3 className=' lg:text-4xl text-6xl font-bold lg:mb-5 mb-8'>Secure Your Place In Top Ranked Universities!</motion.h3>
+                <motion.h3 className=' lg:text-3xl text-6xl font-bold lg:mb-5 mb-8'>Secure your spot in top-ranked universities while entrusting us with your import/export, contracts, and diverse supply needs.</motion.h3>
                 <motion.p className=' lg:text-base text-lg'>
-                    Fuel your passion & aim for academic excellence. We boast of our excellence in helping students gain admission in various study destinations.
+                    Ensure your entry into esteemed universities while relying on us for your import/export, contracts, and various supply necessities. Nurture your aspirations and strive for academic brilliance. We pride ourselves on facilitating students' admissions to diverse study destinations with our exceptional expertise.
                 </motion.p>
                 <motion.button onClick={handleNavigate} className=' w-64 mt-12 hover:scale-110 duration-700 h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg md:mt-8'>Start Your Journey With Us</motion.button>
             </motion.div>
