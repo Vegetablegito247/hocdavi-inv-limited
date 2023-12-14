@@ -32,8 +32,16 @@
   grid-template-columns: 3.5fr 7.5fr;
 }
 
+.grid2nd {
+  grid-template-columns: 5fr 7fr;
+}
+
+.gridInv {
+  grid-template-columns: 7fr 5fr;
+}
+
 @media (max-width: 525px) {
-  .grid2 {
+  .grid2, .grid2nd, .gridInv {
     grid-template-columns: 12fr;
   }
 }

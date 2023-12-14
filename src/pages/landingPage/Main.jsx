@@ -3,19 +3,17 @@ import { AiOutlineGlobal } from "react-icons/ai";
 import { FaHandshake } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
 import { CgPerformance } from "react-icons/cg";
-import { MdDoubleArrow } from "react-icons/md";
 import margeret from '../../img/team/margeret.jpg';
 import kelechi from '../../img/team/kelechi.jpg';
 import ewuzie from '../../img/team/Ewuzie.jpg';
 import gloria from '../../img/team/gloria.jpg';
+import edu from '../../img/school.png';
+import logistic from '../../img/log1.png';
+import visa from '../../img/imgTra3.png';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 function Main() {
-    const eduSvr = ['Study Abroad Programs: Assisting students in exploring international educational opportunities and guiding them through the application and visa process.', 'Professional Development: Conducting workshops and training programs to equip individuals with the skills and knowledge needed to excel in their careers.', 'Vocational Training: Delivering specialized vocational training programs to prepare individuals for various industries and job roles.', 'Educational Consulting: Offering expert advice and guidance to educational institutions seeking to enhance their curriculum, teaching methodologies, and overall effectiveness.'];
-
-    const visSvr = ['Visa Consultation: Providing comprehensive visa consultation services to help clients understand visa requirements and application procedures for various countries.', 'Student Visas: Assisting students in obtaining the appropriate student visas to study abroad, ensuring a smooth transition to their chosen educational institutions.', 'Work Visas: Supporting individuals and businesses in securing work visas to enable international employment opportunities.', 'Tourist Visas: Facilitating the application process for tourist visas, ensuring seamless travel experiences for leisure and exploration.', 'Business Visas: Assisting corporate clients in obtaining business visas to facilitate international trade, conferences, and meetings.', 'Visa Document Preparation: Ensuring accurate and timely completion of visa application forms and necessary documentation.', 'Visa Processing and Follow-up: Managing the visa application process on behalf of clients, including liaising with embassies and consulates for efficient processing.'];
-
     const team = [
         {
             name: 'Margaret Mere',
@@ -37,8 +35,8 @@ function Main() {
         },
         {
             name: 'Gloria Oluchi Cookey',
-            role: 'Strategic Partner',
-            desc: "Gloria is a Strategic Partner at HOCDAVI Investment Limited, bringing more than 12 years of expertise in fostering business growth through Strategic Engagement, Corporate Communication, and Expanding Market Reach leveraging cutting-edge technology. Her focus lies in Go-To-Market Strategies and Key Account Management, harnessing this knowledge to spearhead recruitment initiatives and accomplish the organization's objectives in ensuring a substantial increase in student enrollment across diverse university partnerships.",
+            role: 'Tourist and Logistic Partner',
+            desc: "Gloria, a Tourist and Logistic Partner at HOCDAVI Investment Limited, boasts over 12 years of expertise in driving business growth in the tourism and logistics sector. Leveraging advanced technology, she excels in Go-To-Market Strategies, Key Account Management, and expanding market reach to enhance tourist engagement and optimize logistic operations. Her initiatives spearhead recruitment efforts, aiming to significantly increase tourist influx and facilitate streamlined logistics within a network of diverse partnerships.",
             img: gloria
         }
     ];
@@ -154,13 +152,6 @@ function Main() {
                     }
                 </motion.div>
             </motion.div>
-            {/* <marquee className='flags flex items-center gap-x-5 p-12 text-center mt-20' behaviour='scroll' direction='left'>
-                {
-                    flags.map((flag, id) => (
-                        <img key={id} src={flag} alt="" className=' w-96 h-56 inline-block' />
-                    ))
-                }
-            </marquee> */}
 
             <motion.div className="products lg:p-8 p-12 text-center lg:mt-10 mt-20 md:p-5"
                 variants={container1}
@@ -172,39 +163,38 @@ function Main() {
                 <motion.p className=' text-lg'>
                     HOCDAVI Investment Limited offers a comprehensive range of products and services as an educational services firm and visa agency, catering to the diverse needs of individuals, institutions, and organizations. Our offerings include:
                 </motion.p>
-                <motion.div className="prdSvr grid lg:grid-cols-1 grid-cols-2 lg:gap-x-0 lg:gap-y-4 gap-y-0 gap-x-4 mt-12">
-                    <div className="eduSvr bg-slate-800 p-5 rounded-xl text-slate-100">
-                        <h3 className='font-semibold text-xl mb-4'>Educational Services:</h3>
-                        <div className="eduList grid lg:gap-y-3 gap-y-6">
-                            {
-                                eduSvr.map((edu, ind) => (
-                                    <div key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
-                                        <div className="eduIcon">
-                                            <MdDoubleArrow />
-                                        </div>
-                                        <div className="svrTxt">
-                                            <span>{edu}</span>
-                                        </div>
-                                    </div>
-                                ))
-                            }
+                <motion.div className="prdSvr grid gap-y-8 text-slate-100 mt-8">
+                    <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl">
+                        <div className="prdListImg w-full h-full rounded-xl">
+                            <img className='w-full object-cover rounded-xl' src={edu} alt="" />
+                        </div>
+                        <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
+                            <h4 className='font-semibold text-xl mb-4'>Do you want to study abroad ?</h4>
+                            <p>
+                                Explore endless possibilities by studying abroad with HOCDAVI. We facilitate seamless educational experiences for students aspiring to gain international exposure. Our services encompass guidance on selecting suitable programs, handling visa procedures, and ensuring a smooth transition to your chosen educational destination. Unlock global opportunities for learning and personal growth with us.
+                            </p>
                         </div>
                     </div>
-                    <div className='visSvr bg-slate-800 p-5 rounded-xl text-slate-100'>
-                        <h3 className='font-semibold text-xl mb-4'>Visa Services:</h3>
-                        <div className='visList grid lg:gap-y-3 gap-y-6'>
-                            {
-                                visSvr.map((vis, ind) => (
-                                    <div key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
-                                        <div className="eduIcon">
-                                            <MdDoubleArrow />
-                                        </div>
-                                        <div className="svrTxt">
-                                            <span>{vis}</span>
-                                        </div>
-                                    </div>
-                                ))
-                            }
+                    <div className="prdList w-full bg-slate-800 grid gridInv gap-x-4 p-6 text-start rounded-xl">
+                        <div className="prdListText  w-full bg-blue-800 p-3 rounded-xl">
+                            <h4 className='font-semibold text-xl mb-4'>Get your Visa with us and travel to your desired country successful</h4>
+                            <p>
+                                Obtain your visa hassle-free through our visa application services. We provide comprehensive assistance and guidance throughout the visa application process, ensuring a successful and smooth travel experience to your desired destination.
+                            </p>
+                        </div>
+                        <div className="prdListImg w-full h-72 rounded-xl">
+                            <img className='w-full h-full object-cover rounded-xl' src={visa} alt="" />
+                        </div>
+                    </div>
+                    <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl">
+                        <div className="prdListImg w-full h-72 rounded-xl">
+                            <img className='w-full h-full object-cover rounded-xl' src={logistic} alt="" />
+                        </div>
+                        <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
+                            <h4 className='font-semibold text-xl mb-4'>Looking to import and export your goods ?</h4>
+                            <p>
+                                Streamline import-export operations with our efficient logistics solutions. Simplify trade endeavors through our comprehensive services, designed to optimize and facilitate your global business transactions effectively.
+                            </p>
                         </div>
                     </div>
                 </motion.div>
