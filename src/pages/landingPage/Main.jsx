@@ -164,9 +164,9 @@ function Main() {
                     HOCDAVI Investment Limited offers a comprehensive range of products and services as an educational services firm and visa agency, catering to the diverse needs of individuals, institutions, and organizations. Our offerings include:
                 </motion.p>
                 <motion.div className="prdSvr grid gap-y-8 text-slate-100 mt-8">
-                    <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl">
-                        <div className="prdListImg w-full h-full rounded-xl">
-                            <img className='w-full object-cover rounded-xl' src={edu} alt="" />
+                    <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl lg:gap-y-6 lg:p-4">
+                        <div className="prdListImg w-full h-72 rounded-xl">
+                            <img className='w-full h-full object-cover rounded-xl' src={edu} alt="" />
                         </div>
                         <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
                             <h4 className='font-semibold text-xl mb-4'>Do you want to study abroad ?</h4>
@@ -175,8 +175,8 @@ function Main() {
                             </p>
                         </div>
                     </div>
-                    <div className="prdList w-full bg-slate-800 grid gridInv gap-x-4 p-6 text-start rounded-xl">
-                        <div className="prdListText  w-full bg-blue-800 p-3 rounded-xl">
+                    <div className="prdList w-full bg-slate-800 grid gridInv gap-x-4 p-6 text-start rounded-xl lg:flex lg:flex-col-reverse lg:gap-y-6 lg:p-4">
+                        <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
                             <h4 className='font-semibold text-xl mb-4'>Get your Visa with us and travel to your desired country successful</h4>
                             <p>
                                 Obtain your visa hassle-free through our visa application services. We provide comprehensive assistance and guidance throughout the visa application process, ensuring a successful and smooth travel experience to your desired destination.
@@ -186,7 +186,7 @@ function Main() {
                             <img className='w-full h-full object-cover rounded-xl' src={visa} alt="" />
                         </div>
                     </div>
-                    <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl">
+                    <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl lg:gap-y-6 lg:p-4">
                         <div className="prdListImg w-full h-72 rounded-xl">
                             <img className='w-full h-full object-cover rounded-xl' src={logistic} alt="" />
                         </div>
