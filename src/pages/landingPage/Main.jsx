@@ -24,7 +24,7 @@ function Main() {
         {
             name: 'Ewuzie Mishark Chidinma',
             role: 'Strategic Partner',
-            desc: 'Ewuzie is a Strategic Partner at HOCDAVI Investment Limited with over a decade of experience in helping businesses grow through Strategic Engagement, Corporate Communication and Deepening Market Acquisitions with information technology. Specializing in GoTo Market Strategic and Key Account Management, Ndukwe uses that experience to drive recruitment and achieve the organisation goal for successful student enrollment into various university partners.',
+            desc: 'Ewuzie is a Strategic Partner at HOCDAVI Investment Limited with over a decade of experience in helping businesses grow through Strategic Engagement, Corporate Communication and Deepening Market Acquisitions with information technology. Specializing in GoTo Market Strategic and Key Account Management, Ewuzie uses that experience to drive recruitment and achieve the organisation goal for successful student enrollment into various university partners.',
             img: ewuzie
         },
         {
