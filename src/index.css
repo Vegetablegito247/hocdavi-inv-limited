@@ -83,3 +83,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --primary: rgb(241 245 249);
+  --secondary: rgb(30 41 59);
+  --accent:  rgb(30 64 175);
+}

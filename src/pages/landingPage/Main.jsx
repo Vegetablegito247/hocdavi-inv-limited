@@ -7,9 +7,9 @@ import margeret from '../../img/team/margeret.jpg';
 import kelechi from '../../img/team/kelechi.jpg';
 import ewuzie from '../../img/team/Ewuzie.jpg';
 import gloria from '../../img/team/gloria.jpg';
-import edu from '../../img/school.png';
-import logistic from '../../img/log1.png';
-import visa from '../../img/imgTra3.png';
+import edu from '../../img/studyAbr.png';
+import logistic from '../../img/log.png';
+import visa from '../../img/why-people-travel-hero.png';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -87,13 +87,13 @@ function Main() {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1.1,
-                duration: 4,
+                delay: .7,
+                duration: 1,
                 mass: .4,
                 damping: 7,
                 when: 'beforeChildren',
                 staggerChildren: 0.7,
-                type: 'spring',
+                type: 'tween',
                 stiffness: 120
             }
         }
@@ -108,13 +108,13 @@ function Main() {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1.1,
-                duration: 4,
+                delay: .7,
+                duration: 1,
                 mass: .4,
                 damping: 7,
                 when: 'beforeChildren',
                 staggerChildren: 2,
-                type: 'spring',
+                type: 'tween',
                 stiffness: 150
             }
         }
@@ -144,7 +144,7 @@ function Main() {
                 <motion.div className="whyOutl grid grid-cols-2 gap-x-8 gap-y-8 mt-12 md:grid-cols-1">
                     {
                         businessObjectives.map((obj, ind) => (
-                            <motion.div className="why-line w-full rounded-xl bg-blue-800 p-5">
+                            <motion.div key={ind} className="why-line w-full rounded-xl bg-blue-800 p-5">
                                 <h3 className='font-semibold text-xl mb-4'>{obj.head}</h3>
                                 <p className=''>{obj.description}</p>
                             </motion.div>

@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import imgLogo from '../../img/hocdaLogo.png';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
 import './nav.css'
+import { ToggleTheme } from '../../App';
 
-function Navbar({ openBar, handleSidebar }) {
+function Navbar() {
     const navigate = useNavigate();
+
+    const { handleSidebar} = useContext(ToggleTheme);
 
     const handleNavigate = () => {
         navigate('/apply');
     };
+
     return (
         <nav className='w-full flex justify-between items-center px-12 h-24 sticky border-b-2 shadow-md lg:px-8 lg:h-20 md:px-5 z-10'>
             <div className="logo flex items-center h-full">
@@ -35,12 +39,12 @@ function Navbar({ openBar, handleSidebar }) {
                     </li>
                 </ul>
                 <div className="applyBtn">
-                    <button onClick={handleNavigate} className=' w-32 h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'>Apply Now</button>
+                    <button onClick={handleNavigate} className='px-6 w-[fit-content] h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to=''>Book Appointment</Link></button>
                 </div>
             </div>
             <div className="burApply hidden gap-x-4 items-center h-full lg:flex">
                 <div className="apply">
-                    <button className='w-32 h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'>Apply now</button>
+                    <button className='px-6 w-[fit-content] h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to=''>Book Appointment</Link></button>
                 </div>
                 <div onClick={handleSidebar} className="burger items-center justify-center w-8 h-8 rounded-lg bg-blue-800 text-slate-100 p-1 text-lg hidden lg:flex">
                 <GiHamburgerMenu />

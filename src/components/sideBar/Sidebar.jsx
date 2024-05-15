@@ -1,19 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import './side.css';
 import { IoClose } from "react-icons/io5";
+import { ToggleTheme } from '../../App';
 
-function Sidebar({ openBar, handleSidebar }) {
+function Sidebar() {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
         navigate('/apply')
     }
+
+    const { openSidebar, handleSidebar } = useContext(ToggleTheme);
+    
     return (
         <div className="contSide">
-            <div className={openBar ? "cont active" : "cont"}></div>
+            <div className={openSidebar ? "cont active" : "cont"}></div>
 
-            <div className={openBar ? "side active text-slate-100" : "side"}>
+            <div className={openSidebar ? "side active text-slate-100" : "side"}>
                 <div onClick={handleSidebar} className="close">
                     <IoClose />
                 </div>

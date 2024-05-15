@@ -2,6 +2,7 @@ import React from 'react';
 import Heads from '../../components/utilities/Heads';
 import { MdDoubleArrow } from "react-icons/md";
 import { motion } from 'framer-motion';
+import Chat from '../../components/utilities/Chat';
 
 function Services() {
     const head = 'Our Services';
@@ -89,13 +90,13 @@ function Services() {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1.1,
-                duration: 4,
+                delay: .7,
+                duration: 1,
                 mass: .4,
                 damping: 7,
                 when: 'beforeChildren',
                 staggerChildren: 0.7,
-                type: 'spring',
+                type: 'tween',
                 stiffness: 120
             }
         }
@@ -110,13 +111,13 @@ function Services() {
             opacity: 1,
             x: 0,
             transition: {
-                delay: 1.1,
-                duration: 4,
+                delay: .7,
+                duration: 1,
                 mass: .4,
                 damping: 7,
                 when: 'beforeChildren',
                 staggerChildren: 2,
-                type: 'spring',
+                type: 'tween',
                 stiffness: 150
             }
         }
@@ -219,6 +220,7 @@ function Services() {
                     </div>
                 </motion.div>
             </div>
+            <Chat />
         </div>
     )
 }

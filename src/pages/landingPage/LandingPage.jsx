@@ -1,12 +1,18 @@
 import React from 'react';
 import Header from './Header';
 import Main from './Main';
+import Navbar from '../../components/navbarAndFooter/Navbar';
+import Footer from '../../components/navbarAndFooter/Footer';
+import Chat from '../../components/utilities/Chat';
 
 function LandingPage() {
   return (
     <div>
-        <Header />
-        <Main />
+      <Navbar />
+      <Header />
+      <Main />
+      <Chat />
+      <Footer />
     </div>
   )
 }
