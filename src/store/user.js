@@ -22,7 +22,7 @@ export const signUser = createAsyncThunk('user/signUser', async (usercredential)
 })
 
 const initialState = {
-    user: [],
+    admin: [],
     status: "idle",
     error: null
 }

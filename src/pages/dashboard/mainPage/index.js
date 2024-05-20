@@ -13,8 +13,8 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
     const navigate = useNavigate();
 
     // Checking for token
-    const token = useSelector((state) => state.user.user.token);
-    const user = useSelector((state) => state.user.user.admins);
+    const token = useSelector((state) => state.user.admin.token);
+    const user = useSelector((state) => state.user.admin.user);
 
     const [userFName, setUserFname] = useState('');
     const [userLName, setUserLname] = useState('');
