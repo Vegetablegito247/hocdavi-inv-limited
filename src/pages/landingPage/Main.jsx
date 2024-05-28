@@ -134,80 +134,110 @@ function Main() {
                 </motion.p>
             </motion.div>
 
-            <motion.div className="why-chs lg:p-8 p-12 text-center lg:mt-10 mt-20 bg-slate-800 text-slate-100 md:p-5"
-                variants={container2}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true }}
+            <div className="why-chs lg:p-8 p-12 text-center lg:mt-10 mt-20 bg-slate-800 text-slate-100 md:p-5"
             >
                 <h3 className='lg:text-3xl text-4xl font-bold lg:mb-5 mb-8'>Business Objective for HOCDAVI Investment Limited :</h3>
-                <motion.div className="whyOutl grid grid-cols-2 gap-x-8 gap-y-8 mt-12 md:grid-cols-1">
+                <div className="whyOutl grid grid-cols-2 gap-x-8 gap-y-8 mt-12 md:grid-cols-1">
                     {
                         businessObjectives.map((obj, ind) => (
-                            <motion.div key={ind} className="why-line w-full rounded-xl bg-blue-800 p-5">
+                            <motion.div
+                                variants={container2}
+                                initial='hidden'
+                                whileInView='visible'
+                                viewport={{ once: true }}
+                                key={ind} className="why-line w-full rounded-xl bg-blue-800 p-5">
                                 <h3 className='font-semibold text-xl mb-4'>{obj.head}</h3>
                                 <p className=''>{obj.description}</p>
                             </motion.div>
                         ))
                     }
-                </motion.div>
-            </motion.div>
+                </div>
+            </div>
 
-            <motion.div className="products lg:p-8 p-12 text-center lg:mt-10 mt-20 md:p-5"
-                variants={container1}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true }}
-            >
-                <motion.h3 className='lg:text-3xl text-4xl font-bold lg:mb-5 mb-8'>Our products</motion.h3>
+            <motion.div className="products lg:p-8 p-12 text-center lg:mt-10 mt-20 md:p-5" >
+                <motion.h3
+                    variants={container1}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true }}
+                    className='lg:text-3xl text-4xl font-bold lg:mb-5 mb-8'>Our products</motion.h3>
                 <motion.p className=' text-lg'>
                     HOCDAVI Investment Limited offers a comprehensive range of products and services as an educational services firm and visa agency, catering to the diverse needs of individuals, institutions, and organizations. Our offerings include:
                 </motion.p>
                 <motion.div className="prdSvr grid gap-y-8 text-slate-100 mt-8">
                     <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl lg:gap-y-6 lg:p-4">
-                        <div className="prdListImg w-full h-72 rounded-xl">
+                        <motion.div
+                            variants={container2}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                            className="prdListImg w-full h-72 rounded-xl">
                             <img className='w-full h-full object-cover rounded-xl' src={edu} alt="" />
-                        </div>
-                        <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
+                        </motion.div>
+                        <motion.div
+                            variants={container1}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                            className="prdListText w-full bg-blue-800 p-3 rounded-xl">
                             <h4 className='font-semibold text-xl mb-4'>Do you want to study abroad ?</h4>
                             <p>
                                 Explore endless possibilities by studying abroad with HOCDAVI. We facilitate seamless educational experiences for students aspiring to gain international exposure. Our services encompass guidance on selecting suitable programs, handling visa procedures, and ensuring a smooth transition to your chosen educational destination. Unlock global opportunities for learning and personal growth with us.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="prdList w-full bg-slate-800 grid gridInv gap-x-4 p-6 text-start rounded-xl lg:flex lg:flex-col-reverse lg:gap-y-6 lg:p-4">
-                        <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
+                        <motion.div
+                            variants={container2}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                            className="prdListText w-full bg-blue-800 p-3 rounded-xl">
                             <h4 className='font-semibold text-xl mb-4'>Get your Visa with us and travel to your desired country successful</h4>
                             <p>
                                 Obtain your visa hassle-free through our visa application services. We provide comprehensive assistance and guidance throughout the visa application process, ensuring a successful and smooth travel experience to your desired destination.
                             </p>
-                        </div>
-                        <div className="prdListImg w-full h-72 rounded-xl">
+                        </motion.div>
+                        <motion.div
+                            variants={container1}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }} className="prdListImg w-full h-72 rounded-xl">
                             <img className='w-full h-full object-cover rounded-xl' src={visa} alt="" />
-                        </div>
+                        </motion.div>
                     </div>
                     <div className="prdList w-full bg-slate-800 grid grid2nd gap-x-4 p-6 text-start rounded-xl lg:gap-y-6 lg:p-4">
-                        <div className="prdListImg w-full h-72 rounded-xl">
+                        <motion.div
+                            variants={container2}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                            className="prdListImg w-full h-72 rounded-xl">
                             <img className='w-full h-full object-cover rounded-xl' src={logistic} alt="" />
-                        </div>
-                        <div className="prdListText w-full bg-blue-800 p-3 rounded-xl">
+                        </motion.div>
+                        <motion.div
+                            variants={container1}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }}
+                            className="prdListText w-full bg-blue-800 p-3 rounded-xl">
                             <h4 className='font-semibold text-xl mb-4'>Looking to import and export your goods ?</h4>
                             <p>
                                 Streamline import-export operations with our efficient logistics solutions. Simplify trade endeavors through our comprehensive services, designed to optimize and facilitate your global business transactions effectively.
                             </p>
-                        </div>
+                        </motion.div>
                     </div>
                 </motion.div>
             </motion.div>
 
             <motion.div className="why-chs lg:p-8 p-12 text-center lg:mt-10 mt-20 bg-slate-800 text-slate-100 md:p-5"
-                variants={container2}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true }}
             >
                 <h3 className='lg:text-3xl text-4xl font-bold lg:mb-5 mb-8'>Why Choose HOCDAVI Investment Limited ?</h3>
-                <motion.div className="whyOutl grid grid-cols-2 gap-x-8 gap-y-8 mt-12 md:grid-cols-1">
+                <motion.div
+                    variants={container1}
+                    initial='hidden'
+                    whileInView='visible'
+                    viewport={{ once: true }} className="whyOutl grid grid-cols-2 gap-x-8 gap-y-8 mt-12 md:grid-cols-1">
                     <motion.div className="why-line w-full rounded-xl bg-blue-800 p-5">
                         <div className="whyLogo flex items-center justify-center">
                             <GiSkills className='text-5xl mb-2' />
@@ -217,7 +247,12 @@ function Main() {
                             Our team comprises highly skilled professionals with extensive experience in the education and consultancy sectors, ensuring reliable and knowledgeable support.
                         </p>
                     </motion.div>
-                    <motion.div className="why-line w-full rounded-xl bg-blue-800 p-5">
+                    <motion.div
+                        variants={container1}
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true }}
+                        className="why-line w-full rounded-xl bg-blue-800 p-5">
                         <div className="whyLogo flex items-center justify-center">
                             <FaHandshake className='text-5xl mb-2' />
                         </div>
@@ -226,7 +261,11 @@ function Main() {
                             We prioritize understanding the unique needs of our clients and tailor our services to provide customized solutions that address their specific requirements.
                         </p>
                     </motion.div>
-                    <motion.div className="why-line w-full rounded-xl bg-blue-800 p-5">
+                    <motion.div
+                        variants={container1}
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true }} className="why-line w-full rounded-xl bg-blue-800 p-5">
                         <div className="whyLogo flex items-center justify-center">
                             <AiOutlineGlobal className='text-5xl mb-2' />
                         </div>
@@ -235,7 +274,11 @@ function Main() {
                             With a strong global presence, we serve clients from various industries and backgrounds, promoting diversity and inclusivity in our offerings.
                         </p>
                     </motion.div>
-                    <motion.div className="why-line w-full rounded-xl bg-blue-800 p-5">
+                    <motion.div
+                        variants={container1}
+                        initial='hidden'
+                        whileInView='visible'
+                        viewport={{ once: true }} className="why-line w-full rounded-xl bg-blue-800 p-5">
                         <div className="whyLogo flex items-center justify-center">
                             <CgPerformance className='text-5xl mb-2' />
                         </div>
@@ -248,16 +291,16 @@ function Main() {
             </motion.div>
 
             <motion.div className="meetTeam lg:p-8 p-12 text-center lg:mt-10 mt-20 bg-slate-800 text-slate-100 md:p-5"
-                variants={container2}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true }}
             >
                 <motion.h3 className='text-4xl font-bold lg:mb-5 mb-8'>Meet Our Team</motion.h3>
                 <motion.div className="teamInfo lg:mt-10 mt-12 grid lg:grid-cols-1 gap-y-4">
                     {
                         team.map((team, id) => (
-                            <div key={id} className="member grid grid2 gap-y-4 gap-x-5 bg-blue-800 p-3 rounded-xl">
+                            <motion.div
+                            variants={container2}
+                            initial='hidden'
+                            whileInView='visible'
+                            viewport={{ once: true }} key={id} className="member grid grid2 gap-y-4 gap-x-5 bg-blue-800 p-3 rounded-xl">
                                 <div className="tmImg w-full h-96 rounded-xl">
                                     <img className=' w-full h-full rounded-xl object-cover' src={team.img} alt="" />
                                 </div>
@@ -266,7 +309,7 @@ function Main() {
                                     <h4 className='font-semibold mb-3'>{team.role}</h4>
                                     <p>{team.desc}</p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))
                     }
                 </motion.div>

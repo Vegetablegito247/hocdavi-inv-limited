@@ -6,7 +6,7 @@ import DashHead from "../../../components/dashHead/DashHead";
 import { useSelector} from "react-redux";
 
 function OverView({ handleSideMenu }) {
-  const messages = useSelector((state) => state.message.clients);
+  const messages = useSelector((state) => state.message.message);
 
   const [msgOpt1, setMsgOpt1] = useState(false);
   const handleMsgOpt1 = () => {

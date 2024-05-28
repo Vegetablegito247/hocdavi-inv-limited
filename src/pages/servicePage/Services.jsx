@@ -3,6 +3,8 @@ import Heads from '../../components/utilities/Heads';
 import { MdDoubleArrow } from "react-icons/md";
 import { motion } from 'framer-motion';
 import Chat from '../../components/utilities/Chat';
+import Navbar from '../../components/navbarAndFooter/Navbar';
+import Footer from '../../components/navbarAndFooter/Footer';
 
 function Services() {
     const head = 'Our Services';
@@ -125,6 +127,7 @@ function Services() {
 
     return (
         <div className='services'>
+            <Navbar />
             <Heads head={head} />
             <div className="main">
                 <motion.div className="prd p-12 text-start mt-10 lg:p-8 lg:mt-10 md:p-5"
@@ -139,12 +142,7 @@ function Services() {
                     </p>
                 </motion.div>
 
-                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5"
-                    variants={container2}
-                    initial='hidden'
-                    whileInView='visible'
-                    viewport={{ once: true }}
-                >
+                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5" >
                     <h3 className='text-4xl font-bold mb-6 lg:text-3xl lg:mb-4'>Our Education Services</h3>
                     <p>
                         We offer a wide range of educational services tailored to meet the diverse needs of our clients. From early childhood education to professional development and vocational training, we cater to every stage of the learning journey. Our team of experienced educators and subject matter experts are dedicated to nurturing a passion for learning and unlocking the full potential of our students.
@@ -152,7 +150,10 @@ function Services() {
                     <div className="prdSvr grid grid-cols-1 gap-y-5 bg-slate-800 p-5 rounded-xl text-slate-100 mt-4">
                         {
                             eduSvr.map((edu, ind) => (
-                                <div key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
+                                <motion.div variants={container2}
+                                    initial='hidden'
+                                    whileInView='visible'
+                                    viewport={{ once: true }} key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
                                     <div className="eduIcon">
                                         <MdDoubleArrow />
                                     </div>
@@ -160,18 +161,13 @@ function Services() {
                                         <h4 className='font-bold text-lg'>{edu.head}</h4>
                                         <span>{edu.text}</span>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))
                         }
                     </div>
                 </motion.div>
 
-                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5"
-                    variants={container1}
-                    initial='hidden'
-                    whileInView='visible'
-                    viewport={{ once: true }}
-                >
+                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5" >
                     <h3 className='text-4xl font-bold mb-6 lg:text-3xl lg:mb-4'>Our Consultancy Services</h3>
                     <p>
                         Our consultancy services are designed to support organizations in achieving their goals and overcoming challenges in the ever-changing landscape of the global market. Whether it's strategic planning, market research, project management, or organizational development, our team of seasoned consultants provides personalized solutions that drive growth and sustainable success.
@@ -179,7 +175,11 @@ function Services() {
                     <div className="prdSvr grid grid-cols-1 gap-y-5 bg-slate-800 p-5 rounded-xl text-slate-100 mt-4">
                         {
                             visSvr.map((visa, ind) => (
-                                <div key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
+                                <motion.div
+                                    variants={container1}
+                                    initial='hidden'
+                                    whileInView='visible'
+                                    viewport={{ once: true }} key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
                                     <div className="eduIcon">
                                         <MdDoubleArrow />
                                     </div>
@@ -187,18 +187,13 @@ function Services() {
                                         <h4 className='font-bold text-lg'>{visa.head}</h4>
                                         <span>{visa.text}</span>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))
                         }
                     </div>
                 </motion.div>
 
-                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5"
-                    variants={container2}
-                    initial='hidden'
-                    whileInView='visible'
-                    viewport={{ once: true }}
-                >
+                <motion.div className="eduPrd p-12 text-start mt-4 lg:p-8 lg:mt-10 md:p-5" >
                     <h3 className='text-4xl font-bold mb-6 lg:text-3xl lg:mb-4'>Our Logistic Services</h3>
                     <p>
                         From optimizing transportation networks to enhancing supply chain efficiencies, our adept consultants offer tailored strategies and actionable insights. Whether it's streamlining operations, refining distribution processes, or fostering innovation, our collaborative approach drives logistical excellence and sustainable growth for our clients.
@@ -206,7 +201,11 @@ function Services() {
                     <div className="prdSvr grid grid-cols-1 gap-y-5 bg-slate-800 p-5 rounded-xl text-slate-100 mt-4">
                         {
                             logSvr.map((log, ind) => (
-                                <div key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
+                                <motion.div
+                                    variants={container2}
+                                    initial='hidden'
+                                    whileInView='visible'
+                                    viewport={{ once: true }} key={ind} className="edu flex items-baseline gap-x-4 text-start p-3 bg-blue-800 rounded-xl">
                                     <div className="eduIcon">
                                         <MdDoubleArrow />
                                     </div>
@@ -214,13 +213,14 @@ function Services() {
                                         <h4 className='font-bold text-lg'>{log.head}</h4>
                                         <span>{log.text}</span>
                                     </div>
-                                </div>
+                                </motion.div>
                             ))
                         }
                     </div>
                 </motion.div>
             </div>
             <Chat />
+            <Footer />
         </div>
     )
 }

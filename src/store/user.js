@@ -32,7 +32,7 @@ const userSlice = createSlice({
     initialState: initialState,
     reducers: {
         logUserOut: (state) => {
-            state.user = [];
+            state.admin = [];
             state.status = "idle";
             state.error = null
         }
@@ -43,12 +43,12 @@ const userSlice = createSlice({
         })
         .addCase(logUser.fulfilled, (state, action) => {
             state.status = "succeeded";
-            state.user = action.payload;
+            state.admin = action.payload;
             state.error = null;
         })
         .addCase(logUser.rejected, (state, action) => {
             state.status = "Failed";
-            state.user = [];
+            state.admin = [];
             state.error = action.error.message;
         })
         .addCase(signUser.pending, (state) => {
@@ -56,12 +56,12 @@ const userSlice = createSlice({
         })
         .addCase(signUser.fulfilled, (state, action) => {
             state.status = "Succeeded";
-            state.user = action.payload;
+            state.admin = action.payload;
             state.error = action.error.message;
         })
         .addCase(signUser.rejected, (state, action) => {
             state.status = "Failed";
-            state.user = [];
+            state.admin = [];
             state.error = action.error.message;
         })
     }

@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useNavigate } from 'react-router-dom';
 import './nav.css'
 import { ToggleTheme } from '../../App';
+import { persistor } from '../../store/store';
 
 function Navbar() {
     const navigate = useNavigate();
@@ -14,6 +15,13 @@ function Navbar() {
     const handleNavigate = () => {
         navigate('/apply');
     };
+
+    const handleLogout = () => {
+        // dispatch(logUserOut());
+        persistor.purge();
+        console.log("Worked")
+        navigate('/');
+    }
 
     return (
         <nav className='w-full flex justify-between items-center px-12 h-24 sticky border-b-2 shadow-md lg:px-8 lg:h-20 md:px-5 z-10'>
@@ -39,12 +47,12 @@ function Navbar() {
                     </li>
                 </ul>
                 <div className="applyBtn">
-                    <button onClick={handleNavigate} className='px-6 w-[fit-content] h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to=''>Book Appointment</Link></button>
+                    <button onClick={handleLogout} className='px-6 w-[fit-content] h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to=''>Book Appointment</Link></button>
                 </div>
             </div>
             <div className="burApply hidden gap-x-4 items-center h-full lg:flex">
                 <div className="apply">
-                    <button className='px-6 w-[fit-content] h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to=''>Book Appointment</Link></button>
+                    <button onClick={handleLogout} className='px-6 w-[fit-content] h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to=''>Book Appointment</Link></button>
                 </div>
                 <div onClick={handleSidebar} className="burger items-center justify-center w-8 h-8 rounded-lg bg-blue-800 text-slate-100 p-1 text-lg hidden lg:flex">
                 <GiHamburgerMenu />

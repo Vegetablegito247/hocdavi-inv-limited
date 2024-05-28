@@ -8,7 +8,7 @@ function Sidebar() {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
-        navigate('/apply')
+        navigate('/')
     }
 
     const { openSidebar, handleSidebar } = useContext(ToggleTheme);
@@ -33,7 +33,7 @@ function Sidebar() {
                     </li>
                 </ul>
                 <div onClick={handleSidebar} className="btnSide">
-                    <button onClick={handleNavigate} className=' font-semibold rounded-lg'>Apply Now</button>
+                    <button onClick={handleNavigate} className=' font-semibold rounded-lg w-full'>Book Appointment</button>
                 </div>
             </div>
         </div>

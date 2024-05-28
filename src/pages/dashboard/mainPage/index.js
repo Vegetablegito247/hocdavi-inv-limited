@@ -7,6 +7,7 @@ import { fetchMsg } from '../../../store/message';
 import { BiMessageDetail, BiLogOut } from 'react-icons/bi';
 import './style.css';
 import { logUserOut } from '../../../store/user';
+import { persistor } from '../../../store/store';
 
 function DisplayDashboard({ openMenu, handleSideMenu }) {
     const dispatch = useDispatch();
@@ -34,7 +35,8 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
     }, [dispatch]);
 
     const handleLogout = () => {
-        dispatch(logUserOut());
+        // dispatch(logUserOut());
+        persistor.purge()
         navigate('/');
     }
 
