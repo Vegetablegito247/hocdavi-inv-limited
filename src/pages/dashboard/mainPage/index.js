@@ -35,8 +35,7 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
     }, [dispatch]);
 
     const handleLogout = () => {
-        // dispatch(logUserOut());
-        persistor.purge()
+        dispatch(logUserOut());
         navigate('/');
     }
 
