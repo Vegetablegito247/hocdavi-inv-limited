@@ -24,11 +24,11 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
         if (token === null || !token) {
             navigate('/admin');
         }
-        else {
+        else{
             setUserFname(user.firstName);
             setUserLname(user.lastName);
         }
-    }, [token, navigate, user.firstName, user.lastName]);
+    }, [token, navigate]);
 
     useEffect(() => {
         dispatch(fetchMsg());
