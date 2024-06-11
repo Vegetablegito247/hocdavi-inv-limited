@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LiaMailBulkSolid } from "react-icons/lia";
+import { useDispatch } from 'react-redux';
 import { ImLocation2 } from "react-icons/im";
 import { BiPhoneCall } from "react-icons/bi";
 import { IoIosMail } from "react-icons/io";
@@ -7,8 +8,61 @@ import { TiSocialAtCircular } from "react-icons/ti";
 import { IoTime } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { postMessage } from '../../store/message';
+import { toast } from 'react-toastify';
+
 
 function Footer() {
+    const dispatch = useDispatch();
+
+    const [messageData, setMessageData] = useState({
+        email: '',
+        message: ''
+    })
+    const [error, setError] = useState({});
+
+    const validateMsg = () => {
+        const newErrors = {};
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!messageData.email.trim()) {
+            newErrors.email = 'Email account is required';
+        }
+        else if (!emailPattern.test(messageData.email.trim())) {
+            newErrors.email = 'Invalid email address';
+        }
+
+        if (!messageData.message.trim()) {
+            newErrors.message = 'Message field is required';
+        }
+        else if (messageData.message.length < 100) {
+            newErrors.message = 'Message must be at least 100 characters';
+        }
+
+        setError(newErrors);
+        return Object.keys(newErrors).length === 0;
+    }
+
+    const msgSubmit = (e) => {
+        e.preventDefault();
+
+        if (validateMsg()) {
+            dispatch(postMessage(messageData));
+            toast.success('Message sent successfully');
+            setMessageData({ email: '', message: '' });
+        }
+        else {
+            toast.warning('Please correct the error in the form');
+        }
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setMessageData({
+            ...messageData,
+            [name]: value
+        });
+    };
     return (
         <footer>
             <div className='subNltr grid grid-temp items-center gap-y-6 text-center gap-x-4 bg-slate-600 text-slate-100 lg:mt-10 mt-20 p-12 lg:grid lg:grid-cols-1 md:p-5'>
@@ -16,19 +70,37 @@ function Footer() {
                     <LiaMailBulkSolid />
                 </div>
                 <div className="subTxt">
-                    <h3 className='text-3xl font-bold'>Subsribe To Our Newsletter</h3>
+                    <h3 className='text-3xl font-bold'>Would you like to send us a message?</h3>
                     <p className=' text-base'>
-                        Stay in touch with us to get latest news and special offers on placements and travel.
+                        Let us know your thoughts or inquiries. We'd love to hear from you!
                     </p>
                 </div>
-                <form action="" className="subfrm flex items-center gap-x-3">
-                    <div className="subCtrl flex items-center lg:w-3/4">
-                        <input type="email" className=' w-64 h-11 border-blue-800 border-2 rounded-lg text-slate-900 p-2 outline-none lg:w-full' />
-                    </div>
-                    <div className="subFrmBtn lg:w-1/3">
-                        <button className=' w-40 h-11 rounded-xl bg-blue-800 font-bold lg:w-full'>Subscribe</button>
-                    </div>
-                </form>
+                <form action="" className="subfrm flex flex-col items-center gap-x-3" onSubmit={msgSubmit}>
+                        <div className="subCtrl flex flex-col gap-[10px] items-start lg:w-[100%]">
+                            <div className="inp_ctrl">
+                                <input
+                                    type="email"
+                                    name='email'
+                                    placeholder='Your email'
+                                    onChange={handleChange}
+                                    className=' w-64 h-[40px] border-blue-800 border-2 rounded-lg text-slate-900 p-2 outline-none lg:w-full'
+                                />
+                                {error.email && <span className='err-msg text-red-600 font-[12px]'>{error.email}</span>}
+                            </div>
+                            <div className="inp_ctrl">
+                                <textarea
+                                    name="message"
+                                    placeholder='Your message'
+                                    onChange={handleChange}
+                                    className='w-64 h-[100px] border-blue-800 border-2 rounded-lg text-slate-900 p-2 outline-none lg:w-full'
+                                ></textarea>
+                                {error.message && <span className='err-msg text-red-600 font-[12px]'>{error.message}</span>}
+                            </div>
+                        </div>
+                        <div className="subFrmBtn ">
+                            <button type='submit' className=' w-[250px] h-11 rounded-xl bg-blue-800 font-bold lg:w-[250px]'>Send Message</button>
+                        </div>
+                    </form>
             </div>
 
             <div className="getToUs w-full p-9 bg-slate-800 text-slate-100 grid gap-y-5 grid-cols-5 lg:p-8 lg:grid-cols-1 md:p-5">
@@ -48,15 +120,15 @@ function Footer() {
                 </div>
                 <div className="get flex gap-x-3 h-full">
                     <div className="getLogo">
-                    <IoTime className=' text-5xl text-blue-800' />
+                        <IoTime className=' text-5xl text-blue-800' />
                     </div>
                     <div className="getInfo">
-                            <h3 className=' text-xl font-bold mb-3'>Open hours</h3>
-                            <div className="viewTime grid gap-y-2">
-                                <span><b>Mon - Fri:</b> 8:00am - 18:00pm</span>
-                                <span><b>Saturdays:</b> 9:00am - 16:00pm</span>
-                                <span><b>Sundays:</b> closed</span>
-                            </div>
+                        <h3 className=' text-xl font-bold mb-3'>Open hours</h3>
+                        <div className="viewTime grid gap-y-2">
+                            <span><b>Mon - Fri:</b> 8:00am - 18:00pm</span>
+                            <span><b>Saturdays:</b> 9:00am - 16:00pm</span>
+                            <span><b>Sundays:</b> closed</span>
+                        </div>
                     </div>
                 </div>
                 <div className="get flex gap-x-3 h-full">

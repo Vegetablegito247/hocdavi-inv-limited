@@ -7,7 +7,6 @@ import { fetchMsg } from '../../../store/message';
 import { BiMessageDetail, BiLogOut } from 'react-icons/bi';
 import './style.css';
 import { logUserOut } from '../../../store/user';
-import { persistor } from '../../../store/store';
 
 function DisplayDashboard({ openMenu, handleSideMenu }) {
     const dispatch = useDispatch();
@@ -21,6 +20,8 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
     const [userLName, setUserLname] = useState('');
 
     useEffect(() => {
+        dispatch(fetchMsg());
+        
         if (token === null || !token) {
             navigate('/admin');
         }
@@ -28,11 +29,7 @@ function DisplayDashboard({ openMenu, handleSideMenu }) {
             setUserFname(user.firstName);
             setUserLname(user.lastName);
         }
-    }, [token, navigate]);
-
-    useEffect(() => {
-        dispatch(fetchMsg());
-    }, [dispatch]);
+    }, [token, navigate, dispatch]);
 
     const handleLogout = () => {
         dispatch(logUserOut());

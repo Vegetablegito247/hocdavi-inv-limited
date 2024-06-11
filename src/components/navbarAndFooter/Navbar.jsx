@@ -25,9 +25,9 @@ function Navbar() {
 
     return (
         <nav className='w-full flex justify-between items-center px-12 h-24 sticky border-b-2 shadow-md lg:px-8 lg:h-20 md:px-5 z-10'>
-            <div className="logo flex items-center h-full">
+            <NavLink to='/' className="logo flex items-center h-full">
                 <img className='w-20 h-14 lg:w-16 lg:h-12' src={imgLogo} alt="" />
-            </div>
+            </NavLink>
             <div className="contList text-slate-900 w-fit static h-full flex flex-row items-center gap-x-8 lg:w-2/3 lg:h-full lg:fixed lg:top-0 lg:left-0 lg:bg-blue-800 lg:flex-col lg:justify-start lg:hidden">
                 <ul className="listPages gap-y-3 flex flex-row gap-x-7 items-center h-full font-semibold lg:flex-col lg:gap-y-4 lg:text-slate-100 lg:p-4 lg:gap-x-0 lg:w-full ">
                     <li className='leading-0 h-full lg:h-0 lg:leading-9'>

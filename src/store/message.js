@@ -13,7 +13,7 @@ export const postMessage = createAsyncThunk('message/postMessage', async (userMs
 
 export const fetchMsg = createAsyncThunk('message/fetchMsg', async (_, { getState }) => {
     try {
-        const { token } = getState().admin.user;
+        const { token } = getState().user.admin;
         const response = await axios.get(`https://hocda-server.vercel.app/getMsg`, {
             headers: {
                 Authorization: `Bearer ${token}`

@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { MdCamera } from "react-icons/md";
+import { FaPaperPlane } from "react-icons/fa";
 import './dashHead.css'
 
 function DashHead({headTitle, onClick}) {
@@ -13,9 +13,9 @@ function DashHead({headTitle, onClick}) {
                     <GiHamburgerMenu />
                 </div>
                 <div className="dash_logo">
-                    <h3>D_PHOTOGRAPHY</h3>
+                    <h3>HOCDAVI</h3>
                     <div className="logo_container">
-                        <MdCamera className='dash_icon' />
+                        <FaPaperPlane className='dash_icon' />
                     </div>
                 </div>
         </div>
