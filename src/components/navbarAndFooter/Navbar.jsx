@@ -36,12 +36,12 @@ function Navbar() {
                     </li>
                 </ul>
                 <div className="applyBtn">
-                    <button onClick={handleLogout} className='px-6 w-[fit-content] h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to='https://calendly.com/hocdavi7/consultation'>Book Appointment</Link></button>
+                    <button className='px-6 w-[fit-content] h-12 bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to='https://calendly.com/hocdavi7/consultation'>Book Appointment</Link></button>
                 </div>
             </div>
             <div className="burApply hidden gap-x-4 items-center h-full lg:flex">
                 <div className="apply">
-                    <button onClick={handleLogout} className='px-6 w-[fit-content] h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to='https://calendly.com/hocdavi7/consultation'>Book Appointment</Link></button>
+                    <button className='px-6 w-[fit-content] h-10 text-sm bg-blue-800 text-slate-100 font-semibold rounded-lg'><Link to='https://calendly.com/hocdavi7/consultation'>Book Appointment</Link></button>
                 </div>
                 <div onClick={handleSidebar} className="burger items-center justify-center w-8 h-8 rounded-lg bg-blue-800 text-slate-100 p-1 text-lg hidden lg:flex">
                 <GiHamburgerMenu />
