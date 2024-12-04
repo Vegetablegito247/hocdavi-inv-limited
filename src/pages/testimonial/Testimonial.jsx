@@ -109,11 +109,11 @@ function Testimonial() {
                                 <label htmlFor="">Rating</label>
                                 <select name='rating' value={testimonialData.rating} onChange={handleChange} id="" className='w-full h-[40px] outline-none border-2 border-slate-600 rounded-md'>
                                     <option value=""></option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
+                                    <option value="1">1 star</option>
+                                    <option value="2">2 star</option>
+                                    <option value="3">3 star</option>
+                                    <option value="4">4 star</option>
+                                    <option value="5">5 star</option>
                                 </select>
                                 { error.rating && <span className='text-red-400 text-[12px]'>{error.rating}</span> }
                             </div>
