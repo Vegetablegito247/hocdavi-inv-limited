@@ -3,6 +3,7 @@ import { persistReducer, persistStore } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import msgReducer from './message';
 import userReducer from './user';
+import testimonialReducer from './testimonial';
 
 const persistConfig = {
     key: "root",
@@ -11,7 +12,8 @@ const persistConfig = {
 
 const rootReducers = combineReducers({
     message: msgReducer,
-    user: userReducer
+    user: userReducer,
+    testimonial: testimonialReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducers);

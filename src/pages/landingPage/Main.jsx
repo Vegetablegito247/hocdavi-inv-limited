@@ -12,6 +12,9 @@ import logistic from '../../img/log.png';
 import visa from '../../img/why-people-travel-hero.png';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Slider from "react-slick";
+import { FaQuoteLeft, FaQuoteRight, FaStar } from "react-icons/fa6";
+import { useSelector } from 'react-redux';
 
 function Main() {
     const team = [
@@ -119,6 +122,17 @@ function Main() {
             }
         }
     }
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
+    const testimonials = useSelector((state) => state.testimonial.testimonials)
+    console.log(testimonials)
 
     return (
         <div className=''>
@@ -297,10 +311,10 @@ function Main() {
                     {
                         team.map((team, id) => (
                             <motion.div
-                            variants={container2}
-                            initial='hidden'
-                            whileInView='visible'
-                            viewport={{ once: true }} key={id} className="member grid grid2 gap-y-4 gap-x-5 bg-blue-800 p-3 rounded-xl">
+                                variants={container2}
+                                initial='hidden'
+                                whileInView='visible'
+                                viewport={{ once: true }} key={id} className="member grid grid2 gap-y-4 gap-x-5 bg-blue-800 p-3 rounded-xl">
                                 <div className="tmImg w-full h-96 rounded-xl">
                                     <img className=' w-full h-full rounded-xl object-cover' src={team.img} alt="" />
                                 </div>
@@ -314,6 +328,37 @@ function Main() {
                     }
                 </motion.div>
             </motion.div>
+
+            {
+                testimonials.length > 0 ? <div className='px-[10rem] py-[3rem] md:px-3 md:py-3'>
+                    <h3 className='lg:text-3xl text-4xl font-bold lg:mb-5 mb-8 text-center'>What people say about HOCDAVI</h3>
+                    <Slider {...settings}>
+                        {
+                            testimonials.map((test) => (
+                                <div key={test._id} className='bg-blue-700 p-4 rounded-md text-slate-50'>
+                                    <div className='grid gap-8 text-center'>
+                                        <div>
+                                            <h3 className='font-semibold text-[14px]'>{test.firstName} {test.lastName}</h3>
+                                            <div className='flex gap-1 items-center justify-center'>
+                                                {
+                                                    Array.from({ length: test.rating }).map((_, ind) => (
+                                                        <FaStar className='text-yellow-300' key={ind} />
+                                                    ))
+                                                }
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <FaQuoteLeft className='mx-auto' />
+                                            <p className='text-[22px]'>{test.feedback}</p>
+                                            <FaQuoteRight className='mx-auto' />
+                                        </div>
+                                    </div>
+                                </div>
+                            ))
+                        }
+                    </Slider>
+                </div> : <div></div>
+            }
 
             <motion.div className="strtNw lg:p-8 p-12 text-center lg:mt-10 mt-20 md:p-5"
                 variants={container1}
